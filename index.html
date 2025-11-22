@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Password.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <label for="password" style="font-size: 25px;">Enter Password :</label>
+        <input class="password" type="password" name="password" id="pass" placeholder="ex : alexa@123" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}">
+        <button class="btn" onclick="operation()" id="btn">show</button>
+    </div>
+</body>
+<script>
+    let password = document.getElementById('pass')
+    let btn = document.getElementById('btn')
+    function operation(){
+        if(btn.innerHTML == 'show'){
+            password.type = 'text';
+            btn.innerHTML = 'hide'
+        }
+        else{
+            password.type = 'password'
+            btn.innerHTML = 'show'
+        }
+    }
+</script>
+</html>
